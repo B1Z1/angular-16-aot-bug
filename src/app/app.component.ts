@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private static readonly OPTION = 'None';
-  private static readonly OPTION_TEXT = Symbol(AppComponent.OPTION);
+  private static readonly STATIC_FIELD = 'None';
+  private static readonly STATIC_FIELD_BUG = AppComponent.STATIC_FIELD;
 
   title = 'aot-bug';
 
   constructor() {
-    console.log(AppComponent.OPTION_TEXT);
+    console.log(AppComponent.STATIC_FIELD_BUG);
   }
 }
